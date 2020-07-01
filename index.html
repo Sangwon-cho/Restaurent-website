@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sangwon</title>
+    <link rel="stylesheet" href="/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton|Gloria+Hallelujah"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        text-decoration: none;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        max-width: 600px;
+        background: #232323;
+      }
+      header {
+        background-size: cover;
+        text-align: center;
+        color: black;
+      }
+      a {
+        color: white;
+      }
+      h1 {
+        font-family: "Londrina Shadow", cursive;
+        font-size: 65px;
+        color: white;
+      }
+      h2 {
+        color: #bbbbbb;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      ul {
+        font-family: "Londrina Shadow", cursive;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: space-evenly;
+      }
+      li {
+        display: inline;
+        padding-right: 40px;
+        padding-left: 40px;
+      }
+      div {
+        height: 300px;
+        position: relative;
+        background-size: cover;
+        margin-top: 40px;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+      p {
+        text-align: justify;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        line-height: 28px;
+        height: 30px;
+        padding: 20px;
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        background: black;
+        color: rgba(255, 255, 255, 1);
+        background: -webkit-linear-gradient(
+          bottom,
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0.4)
+        );
+        transition: height 0.5s;
+      }
+      small {
+        opacity: 0;
+      }
+      .show-description p {
+        height: 150px;
+      }
+      .show-description small {
+        opacity: 1;
+        margin-top: 30px;
+      }
+
+      .first {
+        background-image: url("https://i.imgur.com/K5bwN5J.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .second {
+        background-image: url("http://i.imgur.com/omO7wD5.jpg");
+        background-position: center;
+      }
+      .third {
+        background-image: url("https://i.imgur.com/vD3zAKs.jpg");
+        margin-bottom: 30px;
+      }
+      .price {
+        float: right;
+      }
+
+      @media (max-width: 600px) {
+        div {
+          height: 250px;
+        }
+        h1 {
+          font-size: 50px;
+          margin-top: 20px;
+          line-height: 40px;
+        }
+        h2 {
+          font-size: 20px;
+          margin: 20px 0 30px 0;
+        }
+        ul {
+          margin-bottom: -20px;
+        }
+        p {
+          font-size: 20px;
+          line-height: 24px;
+        }
+        small {
+          font-size: 16px;
+        }
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+    <header>
+      <!-- <img src="https://i.imgur.com/l5LKx2P.jpg" /> -->
+      <h1>Joe's Restaurent</h1>
+      <h2>traditional korean food restaurent</h2>
+      <ul class="bar">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Lunch menu</a></li>
+        <li><a href="#">Dinner menu</a></li>
+      </ul>
+    </header>
+    <div class="first">
+      <p>
+        Bibimbap <span class="price">$12</span><br />
+        <small>
+          a large bowl of rice topped with an array of individually prepared
+          vegetables and meat and served with a gochujang (고추장) sauce. Bibim
+          means mixing, and bap means rice. The mixing usually happens at the
+          table by the diner.</small
+        >
+      </p>
+    </div>
+
+    <div class="second">
+      <p>
+        Bulgogi <span class="price">$22</span><br />
+        <small
+          >a classic Korean preparation of beef or pork in which thinly shaved
+          meat is marinated in a sweet and savory sauce, and grilled on a
+          barbecue or on a stove-top griddle.</small
+        >
+      </p>
+    </div>
+    <div class="third">
+      <p>
+        pork-belly <span class="price">$20</span><br />
+        <small>
+          a boneless, fatty cut of meat from the underside of the pig.Bake some
+          garlic and spicy green chilies on the grill and add them when you wrap
+          the meat. You can also bake some fermented Kimchi on the grill. Cook
+          the meat on high heat for a short time
+        </small>
+      </p>
+    </div>
+    <script>
+      $("div").on("click", function () {
+        $(this).toggleClass("show-description");
+      });
+    </script>
+  </body>
+</html>
